@@ -1,0 +1,11 @@
+.ui.grid>.app-form.column:only-child{
+    width: 350px;
+}
+@media (min-width: 600px) {
+    .ui.grid>.app-form.column:only-child{
+        width: 450px;
+    }
+}
+.progressBar.ui.progress .bar{
+    max-width: 100%;
+}

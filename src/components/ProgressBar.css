@@ -1,0 +1,20 @@
+.progressText{
+    white-space: nowrap;
+    position: absolute;
+    width: 100%;
+    font-size: .92857143em;
+    top: 50%;
+    bottom: auto;
+    color: rgba(0,0,0,1);
+    text-shadow: none;
+    margin-top: -.5em;
+    font-weight: 700;
+    text-align: center;
+}
+.progressBar.ui.progress{
+    border-radius: 0;
+}
+.progressBar.ui.progress .bar{
+    background-color: rgba(175,216,229,255);
+    border-radius: 0;
+}
