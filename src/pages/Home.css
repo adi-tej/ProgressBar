@@ -1,5 +1,10 @@
 .ui.grid>.app-form.column:only-child{
-    width: 350px;
+    width: 300px;
+}
+@media (min-width: 350px) {
+    .ui.grid>.app-form.column:only-child{
+        width: 350px;
+    }
 }
 @media (min-width: 600px) {
     .ui.grid>.app-form.column:only-child{
@@ -8,4 +13,11 @@
 }
 .progressBar.ui.progress .bar{
     max-width: 100%;
+}
+.progressBarControl>div{
+    display: inline-block;
+    margin-top: 0.5em;
+}
+.progressBarControl>div:first-child{
+    margin-right: 10px;
 }

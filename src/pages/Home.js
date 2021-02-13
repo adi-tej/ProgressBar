@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './Home.css'
 import api from '../config/axios';
 import _ from 'lodash'
-import {Grid, Header, Dropdown} from "semantic-ui-react";
+import {Grid, Dropdown} from "semantic-ui-react";
 import ProgressBar from "../components/ProgressBar";
 import ProgressButton from "../components/ProgressButton";
 
@@ -60,20 +60,25 @@ const Home = () => {
                                 <ProgressBar key={index} value={bar}/>
                             ))
                         }
-                        <Header>
-                            <Header as='h3' floated='left'>
+                        <div className='progressBarControl'>
+                            <div>
                                 <Dropdown
+                                    compact
+                                    selection
                                     options={barOptions}
                                     value={active}
                                     onChange={(e, {value}) => handleDropDown(value)}
                                 />
-                            </Header>
-                            {
-                                data.buttons.map((button, index) => (
-                                    <ProgressButton key={index} value={button} handleButtonClick={handleButtonClick}/>
-                                ))
-                            }
-                        </Header>
+                            </div>
+                            <div>
+                                {
+                                    data.buttons.map((button, index) => (
+                                        <ProgressButton key={index} value={button}
+                                                        handleButtonClick={handleButtonClick}/>
+                                    ))
+                                }
+                            </div>
+                        </div>
                     </div>
                     : null}
             </Grid.Column>
